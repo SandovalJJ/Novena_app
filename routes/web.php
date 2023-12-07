@@ -37,4 +37,5 @@ Route::get('/ruleta/{participante}', [PistaController::class, 'mostrarRuleta'])-
 //RUTA PARA OBTENER LAS PISTAS DEL GANADOR
 Route::get('/pista-aleatoria/{cedula}', [PistaController::class, 'obtenerPistaAleatoria']);
 
+Route::get('/obtener-pistas/{cedula}', [PistaController::class, 'obtenerPistasGeneradas']);
 

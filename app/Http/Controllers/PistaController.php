@@ -41,7 +41,7 @@ class PistaController extends Controller
 
         // Pista 6: Sumatoria
         $sumatoria = array_sum(str_split(str_replace(['-', ' '], '', $participante->f_nacimiento)));
-        $this->createPista($participante->cedula, 'Sumatoria', $sumatoria);
+        $this->createPista($participante->cedula, 'Sumatoria de los digitos de la \25A1', $sumatoria);
 
         $sumatoriaTelefono = array_sum(str_split($participante->telefono));
         $this->createPista($participante->cedula, 'Sumatoria Teléfono', $sumatoriaTelefono);
@@ -78,31 +78,41 @@ class PistaController extends Controller
     }
     
     private function numeroAMes($numeroMes)
-{
-    $meses = [
-        '01' => 'Enero',
-        '02' => 'Febrero',
-        '03' => 'Marzo',
-        '04' => 'Abril',
-        '05' => 'Mayo',
-        '06' => 'Junio',
-        '07' => 'Julio',
-        '08' => 'Agosto',
-        '09' => 'Septiembre',
-        '10' => 'Octubre',
-        '11' => 'Noviembre',
-        '12' => 'Diciembre'
-    ];
+    {
+        $meses = [
+            '01' => 'Enero',
+            '02' => 'Febrero',
+            '03' => 'Marzo',
+            '04' => 'Abril',
+            '05' => 'Mayo',
+            '06' => 'Junio',
+            '07' => 'Julio',
+            '08' => 'Agosto',
+            '09' => 'Septiembre',
+            '10' => 'Octubre',
+            '11' => 'Noviembre',
+            '12' => 'Diciembre'
+        ];
 
-    return $meses[$numeroMes] ?? 'Mes Desconocido';
-}
+        return $meses[$numeroMes] ?? 'Mes Desconocido';
+    }
 
 
     public function mostrarRuleta($cedula)
     {
         $participante = Participante::findOrFail($cedula);
-        return view('ruleta', compact('participante'));
+        $pistas = Pista::where('fk_cedula', $cedula)->where('estado', 1)->get();
+
+        return view('ruleta', compact('participante', 'pistas'));
     }
+
+    public function obtenerPistasGeneradas($cedula)
+    {
+        $pistas = Pista::where('fk_cedula', $cedula)->where('estado', 1)->get();
+        return response()->json($pistas);
+    }
+
+
 
     public function obtenerPistaAleatoria($cedula) {
         try {
