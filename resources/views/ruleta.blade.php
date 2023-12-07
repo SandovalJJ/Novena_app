@@ -20,53 +20,53 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.modal-content p {
-    font-size: 64px; /* Aumenta el tamaño de la fuente del texto del modal */
-    color: #333; /* Color de texto más oscuro para mejor legibilidad */
-    text-align: center; /* Centrar texto si es necesario */
-    margin-top: 20px;
-}
-
-.close {
-    color: #aaa;
-    float: none; /* Quita el float para centrar el botón de cerrar si es necesario */
-    font-size: 28px; /* Aumenta el tamaño si es necesario */
-    font-weight: bold;
-    position: absolute; /* Posiciona absolutamente para colocarlo en la esquina superior derecha */
-    right: 20px; /* Espaciado desde el lado derecho del modal */
-    top: 20px; /* Espaciado desde la parte superior del modal */
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-    .canada-theme-button {
-        background-color: #c50404; /* Rojo oscuro, similar al de la página */
-        color: white; /* Texto en blanco para contraste */
-        font-weight: bold; /* Letras en negrita */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px 20px; /* Espaciado interno */
-        font-size: 36px; /* Tamaño de fuente */
-        cursor: pointer; /* Cambiar cursor a puntero */
-        transition: all 0.3s ease; /* Transición suave para efectos */
-        box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.6); /* Sombra blanca */
-        margin-right: 10px; /* Margen entre botones */
     }
 
-    .canada-theme-button:hover {
-        background-color: #ff0000; /* Rojo más brillante al pasar el mouse */
-        box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8); /* Sombra blanca más grande en hover */
+    .modal-content p {
+        font-size: 150px; /* Aumenta el tamaño de la fuente del texto del modal */
+        color: #333; /* Color de texto más oscuro para mejor legibilidad */
+        text-align: center; /* Centrar texto si es necesario */
+        margin-top: 20px;
     }
 
-    /* ... Resto de tus estilos ... */
+    .close {
+        color: #aaa;
+        float: none; /* Quita el float para centrar el botón de cerrar si es necesario */
+        font-size: 28px; /* Aumenta el tamaño si es necesario */
+        font-weight: bold;
+        position: absolute; /* Posiciona absolutamente para colocarlo en la esquina superior derecha */
+        right: 20px; /* Espaciado desde el lado derecho del modal */
+        top: 20px; /* Espaciado desde la parte superior del modal */
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+        .canada-theme-button {
+            background-color: #c50404; /* Rojo oscuro, similar al de la página */
+            color: white; /* Texto en blanco para contraste */
+            font-weight: bold; /* Letras en negrita */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 36px; /* Tamaño de fuente */
+            cursor: pointer; /* Cambiar cursor a puntero */
+            transition: all 0.3s ease; /* Transición suave para efectos */
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+            margin-right: 10px; /* Margen entre botones */
+        }
+
+        .canada-theme-button:hover {
+            background-color: #ff0000; /* Rojo más brillante al pasar el mouse */
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8); /* Sombra blanca más grande en hover */
+        }
+
+        /* ... Resto de tus estilos ... */
 </style>
 
 
@@ -86,8 +86,8 @@
         body {
           background: rgb(255,255,255);
           background: -moz-linear-gradient(342deg, rgba(255,255,255,1) 0%, rgba(220,14,14,0.9430365896358543) 70%);
-          background: -webkit-linear-gradient(342deg, rgba(255,255,255,1) 0%, rgba(220,14,14,0.9430365896358543) 70%);
-          background: linear-gradient(342deg, rgba(255,255,255,1) 0%, rgba(220,14,14,0.9430365896358543) 70%);
+
+
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dc0e0e",GradientType=1);
 
             margin: 0;
@@ -140,7 +140,7 @@
         }
 
         button {
-            margin: 0 -335px;
+            margin: 0 150px;
             padding: 10px 20px;
             font-size: 16px;
         }
@@ -167,7 +167,7 @@
         .winners-container h2 {
             text-align: center;
             color: red;
-            font-family: 'Times New Roman', Times, serif;
+            font-family:Arial, Helvetica, sans-serif;
             margin-bottom: 10px;
         }
 
@@ -211,75 +211,69 @@
 </head>
 
 <body>
-  <div class="container">
-    
-    <div class="slotcontainer">
+    <div class="container-fluid">
+        <div class="row mb-3 ms-5">
+            <div class="col-md-7">
+                <h1 class="mt-5" style="color: #333; font-size: 70px; font-weight: 800">🍁 NOVENA CANADIENSE 🍁</h1>
+                <div class="slotcontainer mt-5">
 
-      <div class="slot">
-        <div class="symbols" id="slot1Symbols"></div>
-      </div>
+                <div class="slot">
+                    <div class="symbols" id="slot1Symbols"></div>
+                </div>
 
-      <div class="slot">
-        <div class="symbols" id="slot2Symbols"></div>
-      </div>
+                <div class="slot">
+                    <div class="symbols" id="slot2Symbols"></div>
+                </div>
 
-      <div class="slot">
-        <div class="symbols" id="slot3Symbols"></div>
-      </div>
+                <div class="slot">
+                    <div class="symbols" id="slot3Symbols"></div>
+                </div>
 
-
-        <div class="table-responsive" style="margin-left: 80px; margin-bottom: 240px">
-            <table class="table table-striped table-hover table-borderless table-primary align-middle">
-                <thead class="table-light">
-                    <div class="text-center">
-                    <span class="text-light fw-bold" style="font-size: 60px">
-                        PISTAS
-                    </span>
-                    </div>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
+                </div>
+                <div style="display: flex;">
+                    <button style="margin:auto; " class="canada-theme-button" onclick="spin()">PISTA</button>
+                    <button class="canada-theme-button" onclick="confirmarCedula()">Confirmar Cédula</button>
+                </div>
+    <div style="display: flex;">
+        <!-- Botones y otros elementos -->
+    </div>
+</div>
+<div class="col-md-5">
+    <div class="new-content">
+        <!-- Aquí puedes agregar tus nuevas tablas y datos -->
+        <div class="table-responsive table-dark mt-5" style="font-size:20px; margin-left: 80px; margin-bottom: 220px">
+            <table class="table table-light table-hover table-borderless table-primary align-middle" id="tablaPistas">
+                <thead class="table-dark">
+                    <tr class="table-dark">
+                        <th>Título</th>
+                        <th>Pista</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    <tr
-                        class="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
-                    <tr
-                        class="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
+                    <!-- Las pistas se cargarán aquí -->
                 </tbody>
-                <tfoot>
-                    
-                </tfoot>
             </table>
         </div>
-        
-        
-        
     </div>
+    <form action="{{ route('seleccionar.ganador') }}" method="POST">
+        @csrf <!-- Protección CSRF -->
+        <button style="margin-top: 0px; position: static;" type="submit" class="canada-theme-button">SIGUIENTE GANADOR</button>
+        <button class="canada-theme-button" onclick="confirmarCedula()">Confirmar Cédula</button>
+
+    </form>
+</div>
+
+
     
-    <div style="display: flex;">
-        <button class="canada-theme-button" onclick="spin()">GENERAR PISTA</button>
-        <button class="canada-theme-button" onclick="spin()">GENERAR PISTA</button>
-        
-    </div>
   </div>
   <div id="modal" class="modal" style="display: none;">
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>¡Giro completado!</p>
+      <span class="close">&times;</span>
+      <h2 id="modalTitle" style="font-weight: bold; font-size: 80px"> PISTA DEL GANADOR</h2> <!-- Título agregado -->
+      <p id="modalText" style="font-weight: bold;"></p> <!-- Párrafo para el texto de la pista -->
     </div>
-</div>
+  </div>
+  
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -360,23 +354,48 @@ function reset() {
 }
 
 
-    function logDisplayedSymbols() {
-        $.ajax({
-            url: '/pista-aleatoria/' + cedulaParticipante,
-            type: 'GET',
-            success: function(data) {
-                if (data) {
-                    mostrarPistaEnModal(data.titulo, data.pista);
-                }
-            },
-            error: function() {
-                alert('!Esas son todas las pistas!');
+function logDisplayedSymbols() {
+    $.ajax({
+        url: '/pista-aleatoria/' + cedulaParticipante,
+        type: 'GET',
+        success: function(data) {
+            if (data) {
+                mostrarPistaEnModal(data.titulo, data.pista);
+                // Después de mostrar el modal, carga las pistas actualizadas
+                cargarPistas();
             }
-        });
-    }
+        },
+        error: function() {
+            alert('Error al obtener la pista.');
+        }
+    });
+}
+
+function cargarPistas() {
+    $.ajax({
+        url: '/obtener-pistas/' + cedulaParticipante,
+        type: 'GET',
+        success: function(pistas) {
+            var tablaPistas = $('#tablaPistas tbody');
+            tablaPistas.empty(); // Limpiar la tabla antes de agregar nuevas filas
+
+            pistas.forEach(function(pista) {
+                tablaPistas.append('<tr class="table-primary">' +
+                    '<td style= "background: white">' + pista.titulo + '</td>' +
+                    '<td style= "background: white">' + pista.pista + '</td>' +
+                    '</tr>');
+            });
+        },
+        error: function() {
+            alert('Error al cargar las pistas.');
+        }
+    });
+}
+
 
     function mostrarPistaEnModal(titulo, pista) {
         const modalContent = document.querySelector("#modal .modal-content p");
+        modalContent.textContent = 'pista del ganador';
         modalContent.textContent = titulo + ': ' + pista;
         const modal = document.getElementById('modal');
         modal.style.display = 'block';
